@@ -1,0 +1,42 @@
+.desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: $ice-blue;
+    width: 90%;
+    margin: 0 auto;
+    &-text{
+        width: 50%;
+    }
+    &-content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &-item{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        ion-icon{
+            color: #2199E5;
+        }
+        p{
+            margin-left: 10px;
+        }
+    }
+    &-title{
+        font-size: 45px;
+        font-weight: bold;
+
+    }
+    &-image{
+        height:100%;
+        object-fit:cover;
+        position: relative;
+    }
+}
+.list-image{
+    border-radius: 50%;
+    max-width: 50%;
+    filter: blur();
+}

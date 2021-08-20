@@ -1,0 +1,22 @@
+.desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $ice-blue;
+    &-text{
+        width: 45%;
+    }
+    &-title{
+        font-size: 45px;
+        font-weight: bold;
+
+    }
+    &-image{
+        width: 55%;
+        pos
+        &:before{
+            content: '';
+
+        }
+    }
+}

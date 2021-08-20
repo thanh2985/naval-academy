@@ -1,0 +1,18 @@
+.vnsea{
+    width: 90%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px auto;
+    &-header{
+        width: 37%
+    }
+    &-image{
+        width: 60%;
+        img{
+            height: 500px;  
+            object-fit: cover; 
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: $ice-blue;
+    &-text{
+        width: 50%;
+    }
+    &-item{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        ion-icon{
+            color: $primary-color
+        }
+        p{
+            margin-left: 10px;
+        }
+    }
+    &-title{
+        font-size: 45px;
+        font-weight: bold;
+
+    }
+    &-image{
+        height:100%;
+        object-fit:cover;
+        position: relative;
+    }
+}

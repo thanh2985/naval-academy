@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px 20px;
+    border-bottom: 2px solid $primary-color;
+    img{
+        width: 30px;
+        height: 40px;
+        display: inline-block;
+        position: fixed;
+        top: 15px;
+        left: 5px;
+    }
+    &-logo{
+        font-size: 34px;
+        font-weight: 800;
+        margin-left:30px;
+        p{
+            color:$primary-color;
+            display: inline;
+        }
+    };
+    &-menu{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+}
+.menu{
+    &-item{
+        font-size: 20px;
+        margin: auto 10px;
+        font-weight: 600;
+        padding: auto 10px;
+        text-align: center;
+    }
+    &-link{
+        text-align: center;
+    }
+}

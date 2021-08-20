@@ -1,0 +1,15 @@
+.vnsea{
+    width: 90%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    &-header{
+        width: 30%
+    }
+    &-image{
+        img{
+            width: 50%;
+            height: 500px;   
+        }
+    }
+}

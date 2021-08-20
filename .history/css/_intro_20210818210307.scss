@@ -1,0 +1,23 @@
+.desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: $ice-blue;
+    &-text{
+        width: 45%;
+    }
+    &-item{
+        display: flex;
+        align-items: flex-start;
+    }
+    &-title{
+        font-size: 45px;
+        font-weight: bold;
+
+    }
+    &-image{
+        height: 100%;
+        object-fit:fill;
+        position: relative;
+    }
+}

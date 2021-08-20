@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    &-logo{
+        font-size: 24px;
+        fot
+    };
+    &-menu{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+}
+.menu{
+    &-item{
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+}

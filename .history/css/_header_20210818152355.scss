@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    &-logo{
+
+    };
+    &-menu{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        &-item{
+            margin-right: 30px;
+            coolor: red;
+        }
+    }
+}

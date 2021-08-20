@@ -1,0 +1,45 @@
+.admis{
+    width:95%;
+    position: relative;
+    margin: 0 auto;
+    ov
+    &-list{
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    &-item{
+        width: 20%;
+
+    }
+}
+.tab-next, .tab-prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: #999;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.2s ease;
+}
+.tab{
+    &-next{
+        right:-5px
+    }
+    &-prev{
+        top:- 50px;
+    }
+}

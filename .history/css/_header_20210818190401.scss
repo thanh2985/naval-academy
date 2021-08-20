@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    img{
+        width: 30px;
+        height: 40px;
+        display: inline-block;
+        position: fixed;
+    }
+    &-logo{
+        font-size: 24px;
+        font-weight: 800;
+        margin
+        p{
+            color:$primary-color;
+            display: inline;
+        }
+    };
+    &-menu{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+}
+.menu{
+    &-item{
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+}

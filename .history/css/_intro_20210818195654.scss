@@ -1,0 +1,8 @@
+.desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-image{
+        width: 40%;
+    }
+}

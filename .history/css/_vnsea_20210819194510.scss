@@ -1,0 +1,13 @@
+.vnsea{
+    width: 90%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    
+    &-image{
+        img{
+            width: 60%;
+            height: 500px;   
+        }
+    }
+}

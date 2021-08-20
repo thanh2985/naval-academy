@@ -1,0 +1,22 @@
+.news{
+    width: 95%;
+    margin: ;
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+    &-content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-main{
+        width: 65%;
+    }
+    &-list{
+        width: 30%;
+    }
+}

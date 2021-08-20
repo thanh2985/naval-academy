@@ -1,0 +1,12 @@
+.desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $ice-blue;
+    &-word{
+        
+    }
+    &-image{
+        width: 40%;
+    }
+}

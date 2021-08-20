@@ -1,0 +1,16 @@
+.footer{
+    width: 100%;
+    margin-top: 50px;
+    &-container{
+        width:100%;
+        display: flex;
+        align-items:flex-start;
+        justify-content: space-around;
+    }
+    &-table{
+        &-headder{
+            color: $
+        }
+        color:$primary-color;
+    }
+}

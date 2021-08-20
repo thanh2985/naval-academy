@@ -1,0 +1,28 @@
+.desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $ice-blue;
+    &-text{
+        width: 45%;
+    }
+    &-title{
+        font-size: 45px;
+        font-weight: bold;
+
+    }
+    &-image{
+        width: 55%;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 30%;
+            height: 100%;
+            background-color:red;
+            border-bottom: ;
+        }
+    }
+}
