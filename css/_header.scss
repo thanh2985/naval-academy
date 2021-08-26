@@ -27,7 +27,18 @@
         justify-content: end;
         align-items: center;
     }
-    
+    ion-icon{
+        position: absolute;
+        font-size: 40px;
+        color:$primary-color;
+        top:50%;
+        right:20px;
+        transform: translateY(-50%);
+        z-index: 2;
+        display: none;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
 }
 .logo-text{
     display: flex;
@@ -38,12 +49,82 @@
         margin: auto 10px;
         font-weight: 600;
         padding: 10px 5px;
-        text-align: center;
+        // text-align: center;
         font-weight: bold;
-        transition: all 0.3s ease;
+        transition: color 0.3s linear;
         &:hover{
             color: #3943EF;
             border-bottom: 3px solid #75BCF2;
         }
     }
+}
+@media screen and (max-width: 1339px){
+    .header{
+        flex-direction: column;
+        height: 130px;
+        position: relative;
+        &-logo{
+            // transform: translateX(-350px);
+            position: absolute;
+            left: 30px;
+        }
+        &-menu{
+            position: absolute;
+            right: 30px;
+            height: 100px;
+            margin-top: 15px;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .header{
+        flex-direction: row;
+        height:100px;
+        &-menu{
+            width: 250px;
+            height:350px;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-end;
+            z-index: 2;
+            padding-top:50px;
+            padding-bottom: 20px;
+            right: 10px;
+            top:10px;
+            transition: transform 0.3s ease;
+            visibility: none;
+            opacity: 0;
+            &:after{
+                content: '';
+                position: absolute;
+                background-color: #55646fec;
+                filter: blur(1px);
+                z-index: -1;
+                width: 100%;
+                height:inherit;
+                top: 0;
+                left: 0;
+                border-radius: 20px;
+            }
+        }
+        ion-icon{
+            display:inline;
+        }
+    }
+    .menu{
+        &-item{
+            color:white;
+            text-align: right;
+            &:hover{
+                width: 90%;
+                border: none;
+                color: white;
+                background-color:#5c9ac7a8 ;
+                border-radius: 10px;
+
+            }
+        }
+
+    }
+    
 }
