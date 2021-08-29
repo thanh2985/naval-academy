@@ -39,6 +39,7 @@
         &-text{
             font-size: 20px;
             font-weight: 500;
+            text-indent: 30px;
             color:inherit;
             display:-webkit-box;
             -webkit-line-clamp:2;
@@ -46,6 +47,13 @@
             overflow: hidden;
             text-overflow: ellipsis;
             word-break: break-word;
+        }
+        &-title{
+            color:$text-color;
+            text-indent :30px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
     &-list{
@@ -69,6 +77,14 @@
             overflow: hidden;
             text-overflow: ellipsis;
             word-break: break-word;
+            text-indent: 10px;
+        }
+        &-title{
+            color:$text-color;
+            text-indent :10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 }

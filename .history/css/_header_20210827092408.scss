@@ -1,0 +1,88 @@
+.header{
+    display: flex;
+    height:100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: auto 20px;
+    border-bottom: 2px solid $primary-color;
+    position: relative;
+    &-logo{
+        flex: 1;
+        font-size: 34px;
+        cursor: pointer;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 35px;
+            height: 45px;
+        }
+        span {
+            color:$primary-color;
+
+        }
+    };
+    &-nav{
+        flex:3;
+    }
+}
+.nav{
+    &-menu ul{
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    &-item{
+        position: relative;
+        font-size: 20px;
+        a{  
+            position: relative;
+            color: $text-color;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                color:$primary-color;
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+    }
+    &-dropdown{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 200px;
+        transform: translateY(20px);
+        z-index: 2;
+        opacity: 1;
+        pointer-events: none;
+        ul{
+            background-color: $tear-color;
+            position: relative;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            border-radius: 10px;
+            padding: 10px
+        }
+        &-arrow{
+            position:absolute;
+            background-color: inherit;
+            width: 15px;
+            height:15px;
+            transform: rotate(45deg);
+            top: -8px;
+            left: 30px;
+
+        }
+    }
+}
+.nav-item:hover

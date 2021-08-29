@@ -16,7 +16,6 @@ window.addEventListener("load", function(){
         if(admisList.scrollLeft <=tabScroll) tabPrev.classList.add("disable");
     });
     admisList.addEventListener("wheel", function(event){
-        console.log(admisList.scrollLeft, tabScrollWidth );
         admisList.scrollLeft += (event.deltaY * 2);
         if(admisList.scrollLeft >= tabScrollWidth - (event.deltaY * 2)) {tabNext.classList.add("disable");}
         else tabNext.classList.remove("disable");

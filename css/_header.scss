@@ -2,11 +2,13 @@
     display: flex;
     height:100px;
     justify-content: space-between;
-    align-items: stretch;
-    padding: 20px 20px;
+    align-items: center;
+    padding: auto 40px;
     border-bottom: 2px solid $primary-color;
     position: relative;
     &-logo{
+        // flex: 1;
+        margin-left: 30px;
         font-size: 34px;
         cursor: pointer;
         font-weight: 800;
@@ -17,114 +19,217 @@
             width: 35px;
             height: 45px;
         }
-        p {
+        span {
             color:$primary-color;
 
         }
     };
-    &-menu{
+    &-nav{
+        // flex:3;
+        position:relative;
+        z-index: 5;
+    }
+}
+.nav{
+    &-menu ul{
+        height:100%;
         display: flex;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
     }
-    ion-icon{
-        position: absolute;
-        font-size: 40px;
-        color:$primary-color;
-        top:50%;
-        right:20px;
-        transform: translateY(-50%);
-        z-index: 2;
-        display: none;
-        cursor: pointer;
-        transition: all 0.3s linear;
-    }
-}
-.logo-text{
-    display: flex;
-}
-.menu{
     &-item{
+        padding:20px;
+        position: relative;
         font-size: 20px;
-        margin: auto 10px;
-        font-weight: 600;
-        padding: 10px 5px;
-        // text-align: center;
-        font-weight: bold;
-        transition: color 0.3s linear;
-        &:hover{
-            color: #3943EF;
-            border-bottom: 3px solid #75BCF2;
+        a{  
+            position: relative;
+            color: $text-color;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover > a{
+            color:$primary-color;
+            border-bottom: 2px solid $primary-color;
+        }
+        &:hover .nav-dropdown{
+            opacity: 1;
+            pointer-events: auto;
+            transform: translate(0, 0);
+            
+        }
+    }
+    &-dropdown{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 200px;
+        transform: translateY(10px);
+        z-index: 2;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s linear;
+        ul{
+            background-color: $tear-color;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            border-radius: 10px;
+            padding: 10px;
+            gap:2px;
+            >li{
+                >a{
+                    transition: all 0.2s linear;
+                    &:hover{
+                        color:black;
+                    }
+                }
+            }
+        }
+        &-arrow{
+            position:absolute;
+            background-color: inherit;
+            width: 15px;
+            height:15px;
+            transform: rotate(45deg);
+            top: -8px;
+            left: 30px;
+
+        }
+        &-link{
+            a{
+                color:white;
+            }
+            padding: 10px 10px;
+            transition: all 0.2s linear;
+            width: 100%;
+            border-radius: 20px;
+            &:hover{
+                background-color: $news-color;
+            }
         }
     }
 }
-@media screen and (max-width: 1339px){
+.icon-menu{
+    font-size: 40px;
+    font-weight: 600;
+    color:$primary-color;
+    z-index: 5;
+    display: none;
+}
+@media screen and (max-width: 1279px) {
     .header{
+        height: 120px;
         flex-direction: column;
-        height: 130px;
-        position: relative;
+        justify-content:space-evenly;
+        align-items: center;
+        margin: auto;
         &-logo{
-            // transform: translateX(-350px);
-            position: absolute;
-            left: 30px;
+            align-self: flex-start;     
         }
-        &-menu{
-            position: absolute;
-            right: 30px;
-            height: 100px;
-            margin-top: 15px;
+        &-nav{
+            align-self:flex-end;
         }
     }
 }
 @media screen and (max-width: 1023px) {
     .header{
+        justify-content: space-between;
         flex-direction: row;
-        height:100px;
-        &-menu{
-            width: 250px;
-            height:350px;
-            flex-direction: column;
-            justify-content: start;
-            align-items: flex-end;
-            z-index: 2;
-            padding-top:50px;
-            padding-bottom: 20px;
-            right: 10px;
-            top:10px;
-            transition: transform 0.3s ease;
-            visibility: none;
-            opacity: 0;
-            &:after{
+        &-logo{
+            align-self: center;
+        }
+        &-nav{
+            position: absolute;
+            min-height: 100vh;
+            top:20px;
+            right:-10px;
+            align-self: start;
+            background-color: $dark-blue;
+            color: white;
+            opacity: 0.8;
+            margin-right: 30px;
+            border-radius: 20px;
+            padding: 20px 0;
+            z-index: 4;
+            transform: translateX(500px);
+            transition: all 0.5s ease-in-out;
+            &::before{
                 content: '';
                 position: absolute;
-                background-color: #55646fec;
-                filter: blur(1px);
-                z-index: -1;
                 width: 100%;
-                height:inherit;
-                top: 0;
+                height:100%;
+                top:0;
                 left: 0;
-                border-radius: 20px;
+                filter: blur(5px);
+                background-color: inherit;
+                border-radius: inherit;
+                z-index: -1;
             }
         }
-        ion-icon{
-            display:inline;
-        }
     }
-    .menu{
+    .nav{
+        &-menu{
+            padding: 10px 30px;
+            > ul{
+                border-top:1px solid white;
+                margin-top: 50px;
+                width: 300px;
+                color:white;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
         &-item{
-            color:white;
-            text-align: right;
-            &:hover{
-                width: 90%;
-                border: none;
-                color: white;
-                background-color:#5c9ac7a8 ;
-                border-radius: 10px;
-
+            width:100%;
+            padding: 5px;
+            >a{
+                padding: 10px 10px;
+                color:white;
+                ion-icon{
+                    transform: rotate(-90deg);
+                    transition: all 0.2s linear;
+                    padding: 5px;
+                }
+            }
+            &:hover {
+                >a{
+                    background-color:#acc5f041;
+                    color:inherit;
+                    border: none;
+                    border-radius: 20px;
+                }
+            }
+            >li:first-child{
+                border-top: 1px solid white;
             }
         }
-
+        &-dropdown{
+            position: relative;
+            display:none;
+            width: 90%;
+            border-bottom: 1px solid white;
+            ul{
+                width: 100%;
+                background-color: inherit;
+            }
+        }
     }
-    
+    .icon-menu{
+        width: 40px;
+        display: block;
+        margin-right: 30px;
+        pointer-events: auto;
+        cursor: pointer;
+        // &:active .header-nav{
+        //     transform: translateX(0);
+        // }
+    }
 }
+
+

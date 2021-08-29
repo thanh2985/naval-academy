@@ -1,0 +1,51 @@
+.header{
+    display: flex;
+    height:100px;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px 20px;
+    border-bottom: 2px solid $primary-color;
+    position: relative;
+    &-logo{
+        flex: 1;
+        font-size: 34px;
+        cursor: pointer;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 35px;
+            height: 45px;
+        }
+        p {
+            color:$primary-color;
+
+        }
+    };
+    &-nav{
+        flex:3;
+    }
+}
+.nav{
+    &-menu ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-item{
+        position: relative;
+        a{
+            color: rgb(216, 85, 85);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: .5s;
+        }
+    }
+    &-dropdown{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+}
