@@ -231,5 +231,25 @@
         // }
     }
 }
+@media screen and (max-width: 374px) {
+    .logo-text{
+        font-size: 24px;
+    }
+    .nav-menu{
+        width: 300px;
+        ul{
+            width: 100%;
+            li{
+                width: inherit;
+                a{
+                    font-size: 16px;
+                    padding:5px 10px;
+                }  
+
+            }
+        }
+    }
+}
+
 
 

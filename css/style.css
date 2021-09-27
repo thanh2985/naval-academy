@@ -342,6 +342,25 @@ a.button:hover {
     cursor: pointer;
   }
 }
+@media screen and (max-width: 374px) {
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .nav-menu {
+    width: 300px;
+  }
+  .nav-menu ul {
+    width: 100%;
+  }
+  .nav-menu ul li {
+    width: inherit;
+  }
+  .nav-menu ul li a {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+}
 .desc {
   display: flex;
   justify-content: space-between;
